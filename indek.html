@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi Produk Premium</title>
+    
+    <script>
+      // Kode Pixel Anda diletakkan di baris ini
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background-color: #ffffff;
+            max-width: 480px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            /* Garis batas warna hitam untuk memberikan bingkai yang tegas dan rapi */
+            border: 2px solid #000000; 
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .product-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+        .product-desc {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ee4d2d; /* Warna khas Shopee */
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            width: 80%;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #d73a1e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="URL_GAMBAR_PRODUK_ANDA.jpg" alt="Gambar Produk" class="product-image">
+        
+        <div class="product-title">Daster Rayon Premium</div>
+        
+        <div class="product-desc">
+            Bahan rayon asli yang sangat sejuk dan nyaman digunakan seharian di rumah. Jahitan rapi dengan potongan yang elegan.
+        </div>
+        
+        <a href="URL_AFFILIATE_SHOPEE_ANDA" class="cta-button" onclick="fbq('trackCustom', 'KlikShopee');">
+            Cek Harga Diskon di Shopee
+        </a>
+    </div>
+
+</body>
+</html>
