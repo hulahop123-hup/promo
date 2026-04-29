@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekomendasi Produk Premium</title>
     
-    <script>
-      // PASTIKAN BASE CODE PIXEL ANDA DITEMPEL DI SINI
-    </script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -57,7 +54,6 @@
             width: 80%;
             transition: background-color 0.3s;
         }
-        /* Efek hover dinamis (opsional) */
         .cta-button:hover {
             opacity: 0.8;
         }
@@ -81,31 +77,32 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // 1. Siapkan Link Anda di sini
-            const linkShopee = "https://s.shopee.co.id/5Aoos8SYba";
             
-            // GANTI NOMOR 628... DI BAWAH INI DENGAN NOMOR WA ANDA
+            // ==========================================
+            // SAKELAR PENGATURAN (UBAH DI SINI)
+            // Ketik "SHOPEE" untuk ke Affiliate
+            // Ketik "WA" untuk ke WhatsApp
+            // ==========================================
+            const TUJUAN_TOMBOL = "SHOPEE"; 
+            
+            
+            // Daftar Link (Pastikan nomor WA sudah benar)
+            const linkShopee = "https://s.shopee.co.id/5Aoos8SYba";
             const linkWA = "https://wa.me/6281234567890?text=Halo+Kak+saya+mau+ambil+Promo+Daster+100rb+4pcs"; 
             
-            // 2. Deteksi parameter dari URL iklan Meta
-            const urlParams = new URLSearchParams(window.location.search);
-            const dest = urlParams.get('dest');
-            
-            // 3. Eksekusi perubahan tombol
+            // Eksekusi Logika Tombol
             const btn = document.getElementById('btn-order');
             
-            // RUMUS INI JANGAN DIUBAH SAMA SEKALI
-            if (dest === 'shopee') {
-                // Jika parameter dest=shopee, lari ke Affiliate
+            if (TUJUAN_TOMBOL === "SHOPEE") {
                 btn.href = linkShopee;
                 btn.innerHTML = "Amankan Promo di Shopee";
                 btn.style.backgroundColor = "#ee4d2d"; // Warna Orange Shopee
             } else {
-                // Default (jika tidak ada parameter), lari ke WA
                 btn.href = linkWA;
                 btn.innerHTML = "Pesan Sekarang via WA";
                 btn.style.backgroundColor = "#25D366"; // Warna Hijau WA
             }
+            
         });
     </script>
 
