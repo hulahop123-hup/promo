@@ -80,27 +80,31 @@
             
             // ==========================================
             // SAKELAR PENGATURAN (UBAH DI SINI)
-            // Ketik "SHOPEE" untuk ke Affiliate
-            // Ketik "WA" untuk ke WhatsApp
+            // Ketik "WA" untuk mengarahkan ke WhatsApp
+            // Ketik "SHOPEE" untuk mengarahkan ke Affiliate
             // ==========================================
-            const TUJUAN_TOMBOL = "SHOPEE"; 
+            const TUJUAN_TOMBOL = "WA"; 
             
             
-            // Daftar Link (Pastikan nomor WA sudah benar)
+            // Daftar Link Anda
+            const linkWA = "https://wa.me/6281234567890?text=Halo+Kak+saya+mau+ambil+Promo+Daster+100rb+4pcs"; // <-- GANTI NOMOR WA DI SINI
             const linkShopee = "https://s.shopee.co.id/5Aoos8SYba";
-            const linkWA = "https://wa.me/6281234567890?text=Halo+Kak+saya+mau+ambil+Promo+Daster+100rb+4pcs"; 
+            
             
             // Eksekusi Logika Tombol
             const btn = document.getElementById('btn-order');
             
-            if (TUJUAN_TOMBOL === "SHOPEE") {
-                btn.href = linkShopee;
-                btn.innerHTML = "Amankan Promo di Shopee";
-                btn.style.backgroundColor = "#ee4d2d"; // Warna Orange Shopee
-            } else {
+            if (TUJUAN_TOMBOL === "WA") {
+                // Setelan tombol WhatsApp
                 btn.href = linkWA;
                 btn.innerHTML = "Pesan Sekarang via WA";
                 btn.style.backgroundColor = "#25D366"; // Warna Hijau WA
+                
+            } else if (TUJUAN_TOMBOL === "SHOPEE") {
+                // Setelan tombol Shopee
+                btn.href = linkShopee;
+                btn.innerHTML = "Amankan Promo di Shopee";
+                btn.style.backgroundColor = "#ee4d2d"; // Warna Orange Shopee
             }
             
         });
