@@ -79,19 +79,26 @@
         document.addEventListener("DOMContentLoaded", function() {
             
             // ==========================================
-            // SAKELAR PENGATURAN (UBAH DI SINI)
+            // 1. SAKELAR PENGATURAN (UBAH DI SINI)
             // Ketik "WA" untuk mengarahkan ke WhatsApp
             // Ketik "SHOPEE" untuk mengarahkan ke Affiliate
             // ==========================================
-            const TUJUAN_TOMBOL = "SHOPEE"; 
+            const TUJUAN_TOMBOL = "WA"; 
             
             
-            // Daftar Link Anda
-            const linkWA = "https://wa.me/6281234567890?text=Halo+Kak+saya+mau+ambil+Promo+Daster+100rb+4pcs"; // <-- GANTI NOMOR WA DI SINI
+            // ==========================================
+            // 2. MASUKKAN NOMOR WA DI SINI (Ganti tulisan NOMOR_WA_DISINI)
+            // ==========================================
+            const linkWA = "https://wa.me/6289668497168?text=Halo+Kak+saya+mau+ambil+Promo+Daster+100rb+3pcs"; 
+            
+            
+            // Link Shopee (Sudah dikunci, jangan diubah)
             const linkShopee = "https://s.shopee.co.id/5Aoos8SYba";
             
             
-            // Eksekusi Logika Tombol
+            // ==========================================
+            // LOGIKA TOMBOL (JANGAN DISENTUH)
+            // ==========================================
             const btn = document.getElementById('btn-order');
             
             if (TUJUAN_TOMBOL === "WA") {
