@@ -83,7 +83,9 @@
         document.addEventListener("DOMContentLoaded", function() {
             // 1. Siapkan Link Anda di sini
             const linkShopee = "https://s.shopee.co.id/5Aoos8SYba";
-            const linkWA =  // GANTI DENGAN NOMOR WA ANDA
+            
+            // GANTI NOMOR 628... DI BAWAH INI DENGAN NOMOR WA ANDA
+            const linkWA = "https://wa.me/6281234567890?text=Halo+Kak+saya+mau+ambil+Promo+Daster+100rb+4pcs"; 
             
             // 2. Deteksi parameter dari URL iklan Meta
             const urlParams = new URLSearchParams(window.location.search);
@@ -92,7 +94,8 @@
             // 3. Eksekusi perubahan tombol
             const btn = document.getElementById('btn-order');
             
-            if (https://s.shopee.co.id/5Aoos8SYba?dest === 'shopee') {
+            // RUMUS INI JANGAN DIUBAH SAMA SEKALI
+            if (dest === 'shopee') {
                 // Jika parameter dest=shopee, lari ke Affiliate
                 btn.href = linkShopee;
                 btn.innerHTML = "Amankan Promo di Shopee";
