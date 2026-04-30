@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROMO DASTER JUMBO</title>
     
+    <!-- PASTIKAN BASE CODE PIXEL META ANDA DITEMPEL DI SINI -->
+    
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,101 +21,178 @@
             max-width: 480px;
             width: 100%;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
             text-align: center;
+            box-sizing: border-box;
         }
         .product-image {
             width: 100%;
-            max-width: 300px;
+            max-width: 320px;
             height: auto;
             border: 2px solid #000000; 
-            border-radius: 4px;
+            border-radius: 8px;
             margin-bottom: 15px;
         }
         .product-title {
-            font-size: 22px;
-            font-weight: bold;
-            color: #333333;
+            font-size: 24px;
+            font-weight: 800;
+            color: #222222;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+        .promo-badge {
+            color: #ee4d2d;
+            font-size: 18px;
+            font-weight: 900;
+            background-color: #fff1f1;
+            padding: 4px 12px;
+            border-radius: 4px;
+            display: inline-block;
             margin-bottom: 10px;
+            border: 1px dashed #ee4d2d;
+        }
+        .rating-stats {
+            font-size: 14px;
+            color: #ff9d00;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .rating-stats span {
+            color: #666666;
+            font-weight: normal;
         }
         .product-desc {
-            font-size: 16px;
-            color: #666666;
+            font-size: 15px;
+            color: #444444;
+            text-align: left;
+            background-color: #fcfcfc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ee4d2d;
             margin-bottom: 20px;
-            line-height: 1.5;
+            line-height: 1.6;
+        }
+        .urgency-text {
+            color: #d32f2f;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 12px;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
         }
         .cta-button {
             display: inline-block;
             color: #ffffff;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 800;
             text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 6px;
-            width: 80%;
-            transition: background-color 0.3s;
+            padding: 16px 30px;
+            border-radius: 50px;
+            width: 85%;
+            box-sizing: border-box;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            border: none;
+            /* Efek animasi bernapas */
+            animation: pulse 2s infinite;
         }
-        .cta-button:hover {
-            opacity: 0.8;
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <!-- GAMBAR PRODUK -->
         <img src="3pcs.jpg" alt="Gambar Produk" class="product-image">
         
-        <div class="product-title">Daster Rayon Jumbo
-            (Promo 100 Ribu Dapat 3)</div>
+        <div class="product-title">Daster Rayon Jumbo</div>
+        <div class="promo-badge">PROMO 100 RIBU DAPAT 3</div>
         
-        <div class="product-desc">
-            Daster Jumbo Busui Kancing Depan, LD 120cm Panjang 115cm muat buat bb 40-80kg Motif Random
-            (Bisa Request Warna)
+        <div class="rating-stats">
+            ⭐⭐⭐⭐⭐ 4.9/5 <span>(Terjual 2.450+ Paket)</span>
         </div>
         
-        <a href="#" id="btn-order" class="cta-button" onclick="fbq('track', 'Purchase');">
+        <div class="product-desc">
+            Daster premium harian yang sangat adem dan nyaman digunakan.<br><br>
+            ✅ <b>Busui Friendly</b> (Kancing Depan)<br>
+            ✅ <b>Ukuran Jumbo</b> (LD 120cm | Panjang 115cm)<br>
+            ✅ <b>Bebas Gerak</b> (Muat BB 40 - 80kg)<br>
+            ✅ <b>Motif Random</b> (Bisa Request Warna)
+        </div>
+        
+        <div class="urgency-text">
+            ⏳ Promo Berakhir Hari Ini! Stok tersisa 14 paket.
+        </div>
+        
+        <!-- Tombol ini murni dikendalikan oleh Javascript di bawah -->
+        <a href="javascript:void(0);" id="btn-order" class="cta-button">
             Memuat tombol...
         </a>
     </div>
 
+    <!-- SCRIPT PINTAR (ROTATOR & SAKELAR) -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             
             // ==========================================
-            // 1. SAKELAR PENGATURAN (UBAH DI SINI)
-            // Ketik "WA" untuk mengarahkan ke WhatsApp
-            // Ketik "SHOPEE" untuk mengarahkan ke Affiliate
+            // 1. SAKELAR PENGATURAN
             // ==========================================
-            const TUJUAN_TOMBOL = "WA"; 
+            const TUJUAN = "WA"; 
             
             
             // ==========================================
-            // 2. MASUKKAN NOMOR WA DI SINI (Ganti tulisan NOMOR_WA_DISINI)
+            // 2. DAFTAR NOMOR ADMIN WA (ROTATOR)
             // ==========================================
-            const linkWA = "https://wa.me/6289668497168?text=Halo+Kak+saya+mau+ambil+Promo+Daster+100rb+3pcs"; 
+            const daftarAdmin = [
+                "6289668497168", // Admin 1 (Nomor Mas)
+                "6281234567890"  // Admin 2 (Silakan ganti dengan nomor admin kedua)
+                // Jika mau tambah Admin 3, tambahkan koma di atas, lalu tulis nomornya di bawah ini
+            ];
+            
+            // Mesin pengocok untuk memilih admin secara acak
+            const adminTerpilih = daftarAdmin[Math.floor(Math.random() * daftarAdmin.length)];
             
             
-            // Link Shopee (Sudah dikunci, jangan diubah)
+            // ==========================================
+            // 3. LINK TUJUAN PESANAN
+            // ==========================================
+            const linkWhatsApp = "https://wa.me/" + adminTerpilih + "?text=Halo+Kak+saya+mau+ambil+Promo+Daster+100rb+3pcs"; 
             const linkShopee = "https://s.shopee.co.id/5Aoos8SYba";
             
             
             // ==========================================
-            // LOGIKA TOMBOL (JANGAN DISENTUH)
+            // LOGIKA TOMBOL (ANTI ERROR)
             // ==========================================
-            const btn = document.getElementById('btn-order');
+            const tombol = document.getElementById('btn-order');
             
-            if (TUJUAN_TOMBOL === "WA") {
-                // Setelan tombol WhatsApp
-                btn.href = linkWA;
-                btn.innerHTML = "Pesan Sekarang Via WA";
-                btn.style.backgroundColor = "#25D366"; // Warna Hijau WA
+            if (TUJUAN.toUpperCase() === "WA") {
+                tombol.onclick = function() {
+                    // Pemicu Pixel Meta
+                    if (typeof fbq === 'function') { fbq('track', 'Purchase'); }
+                    // Pindah ke WA
+                    window.location.href = linkWhatsApp;
+                };
+                tombol.innerHTML = "Pesan Sekarang Via WA";
+                tombol.style.backgroundColor = "#25D366"; // Warna Hijau WA
                 
-            } else if (TUJUAN_TOMBOL === "SHOPEE") {
-                // Setelan tombol Shopee
-                btn.href = linkShopee;
-                btn.innerHTML = "Amankan Promo di Shopee";
-                btn.style.backgroundColor = "#ee4d2d"; // Warna Orange Shopee
+            } else if (TUJUAN.toUpperCase() === "SHOPEE") {
+                tombol.onclick = function() {
+                    // Pemicu Pixel Meta
+                    if (typeof fbq === 'function') { fbq('track', 'Purchase'); }
+                    // Pindah ke Shopee
+                    window.location.href = linkShopee;
+                };
+                tombol.innerHTML = "Amankan Promo di Shopee";
+                tombol.style.backgroundColor = "#ee4d2d"; // Warna Orange Shopee
             }
             
         });
