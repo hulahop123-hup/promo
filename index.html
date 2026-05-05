@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROMO DASTER JUMBO</title>
     
-    <!-- PASTIKAN BASE CODE PIXEL META ANDA DITEMPEL DI SINI -->
+    <!-- ========================================== -->
+    <!-- MULAI KODE PIXEL META -->
+    <!-- ========================================== -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '455837542554611');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=455837542554611&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- ========================================== -->
+    <!-- AKHIR KODE PIXEL META -->
+    <!-- ========================================== -->
     
     <style>
         body {
@@ -133,7 +153,6 @@
             ⏳ Promo Berakhir Hari Ini! Stok tersisa 14 paket.
         </div>
         
-        <!-- Tombol ini murni dikendalikan oleh Javascript di bawah -->
         <a href="javascript:void(0);" id="btn-order" class="cta-button">
             Memuat tombol...
         </a>
@@ -148,26 +167,21 @@
             // ==========================================
             const TUJUAN = "WA"; 
             
-            
             // ==========================================
             // 2. DAFTAR NOMOR ADMIN WA (ROTATOR)
             // ==========================================
             const daftarAdmin = [
-                "6289668497168", // Admin 1 (Nomor Mas)
-                "6281234567890"  // Admin 2 (Silakan ganti dengan nomor admin kedua)
-                // Jika mau tambah Admin 3, tambahkan koma di atas, lalu tulis nomornya di bawah ini
+                "6289668497168" // Saat ini hanya 1 admin aktif
             ];
             
-            // Mesin pengocok untuk memilih admin secara acak
+            // Mesin pengocok untuk memilih admin
             const adminTerpilih = daftarAdmin[Math.floor(Math.random() * daftarAdmin.length)];
-            
             
             // ==========================================
             // 3. LINK TUJUAN PESANAN
             // ==========================================
             const linkWhatsApp = "https://wa.me/" + adminTerpilih + "?text=Halo+Kak+saya+mau+ambil+Promo+Daster+100rb+3pcs"; 
             const linkShopee = "https://s.shopee.co.id/5Aoos8SYba";
-            
             
             // ==========================================
             // LOGIKA TOMBOL (ANTI ERROR)
@@ -176,23 +190,19 @@
             
             if (TUJUAN.toUpperCase() === "WA") {
                 tombol.onclick = function() {
-                    // Pemicu Pixel Meta
                     if (typeof fbq === 'function') { fbq('track', 'Purchase'); }
-                    // Pindah ke WA
                     window.location.href = linkWhatsApp;
                 };
                 tombol.innerHTML = "Pesan Sekarang Via WA";
-                tombol.style.backgroundColor = "#25D366"; // Warna Hijau WA
+                tombol.style.backgroundColor = "#25D366"; 
                 
             } else if (TUJUAN.toUpperCase() === "SHOPEE") {
                 tombol.onclick = function() {
-                    // Pemicu Pixel Meta
                     if (typeof fbq === 'function') { fbq('track', 'Purchase'); }
-                    // Pindah ke Shopee
                     window.location.href = linkShopee;
                 };
                 tombol.innerHTML = "Amankan Promo di Shopee";
-                tombol.style.backgroundColor = "#ee4d2d"; // Warna Orange Shopee
+                tombol.style.backgroundColor = "#ee4d2d"; 
             }
             
         });
